@@ -5,22 +5,21 @@ import CardTotal from "../components/CardTotal";
 
 
 
-const ProductList = () => {
+const ProductList = ({ newProduct, deleteData }) => {
   return (
     <div className="container mt-3">
-      <div className={"bg-light d-sm-block d-md-flex"}>
-        <p className="text-center text-danger w-100">Loading....</p>
+      <div className={" d-sm-block d-md-flex"}>
 
         <>
           <article id="product-panel" className="col-md-6">
-            <ProductCard />
+            <ProductCard newProduct={newProduct} deleteData={deleteData} />
           </article>
           <article className="col-md-4 m-3">
-            <CardTotal />
+            <CardTotal newProduct={newProduct} />
           </article>
         </>
 
-        <p className="text-center text-danger w-100">No products data...</p>
+        {/* <p className="text-center text-danger w-100">No products data...</p> */}
       </div>
     </div>
   );
