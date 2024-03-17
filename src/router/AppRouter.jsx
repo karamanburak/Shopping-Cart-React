@@ -3,7 +3,10 @@ import Main from '../pages/Main'
 import NewProduct from '../pages/NewProduct'
 import ProductList from '../pages/ProductList'
 import UpdateProduct from '../pages/UpdateProduct'
+import MyNavbar from '../components/MyNavbar';
+import axios from 'axios';
 import About from '../pages/About'
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import spinner from '../assets/loading.gif'
@@ -38,6 +41,25 @@ const AppRouter = () => {
         )
 
     }
+
+    //! POST (CREATE)\\
+
+    const postData = async (newData) => {
+        await axios.post(BASE_URL, newData)
+        getData()
+    }
+
+    //! DELETE (Remove from database)\\
+
+    const deleteData = async (id) => {
+
+        await axios.delete(`${BASE_URL}/${id}`)
+        getData()
+
+    }
+
+
+
   return (
       <div>
           <Router>
