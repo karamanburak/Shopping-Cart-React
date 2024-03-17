@@ -66,7 +66,7 @@ const AppRouter = () => {
               <Routes>
                   <Route exact path='/' element={<Main />} />
                   <Route path='/newproduct' element={<NewProduct postData={postData} />} />
-                  <Route path='/productlist' element={<ProductList newProduct={newProduct} deleteData={deleteData} />} />
+                  <Route path='/productlist' element={<ProductList newProduct={newProduct} setNewProduct={setNewProduct} deleteData={deleteData} getData={getData} postData={postData}/>} />
                   <Route path='/updateproduct' element={<UpdateProduct newProduct={newProduct} setNewProduct={setNewProduct} />} />
                   <Route path='/about' element={<About />} />
               </Routes>

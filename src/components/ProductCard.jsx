@@ -1,25 +1,39 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ newProduct, deleteData }) => {
-  const [cartItems, setCartItems] = useState([...newProduct])
-  // console.log(cartItems);
+const ProductCard = ({ newProduct, setNewProduct, deleteData}) => {
+
   const navigate = useNavigate()
 
 
-  const increaseCart = (id) => {
-    setCartItems(currItems => {
-      {
-        currItems.map((item) => {
-          if (item.id === id) {
+ const handleDecrement = (id) => {
+   setNewProduct(newProduct.map((product) => {
+     if (product.id === id) {
+       return { ...product, amount: product.amount -  (product.amount > 1 ? 1 : 0) }
+     }
+     return product
+    }))
 
-            return { ...item, amount: item.amount + 1 }
-          }
-        })
-      }
-    }
-    )
   }
+
+
+  const handleIncreasement = (id) => {
+    setNewProduct(newProduct.map((product)=>{
+      if(product.id === id) {
+        if(product.amount < 10){
+          return {...product, amount: Number(product.amount) + (product.amount < 10 ? 1 : 0 )}
+          
+        }else {
+          alert("Number of products cannot be more than 10")
+        }
+       
+        
+      }
+      return product
+    }))
+
+  }
+
+ 
 
 
   return (<div>
@@ -53,13 +67,13 @@ const ProductCard = ({ newProduct, deleteData }) => {
               <div className="border border-1 border-dark shadow-lg d-flex justify-content-center p-2">
                 <div className="quantity-controller">
                   <button
-                    // onClick={() => decreaseCart(id)}
+                    onClick={() => handleDecrement(id)}
                     className="btn btn-secondary btn-sm">
                     <i className="fas fa-minus"></i>
                   </button>
                   <p className="d-inline mx-4" id="product-quantity">{amount} </p>
                   <button
-                    onClick={() => increaseCart(id)}
+                    onClick={() => handleIncreasement(id)}
                     className="btn btn-secondary btn-sm">
                     <i className="fas fa-plus" ></i>
                   </button>
