@@ -17,32 +17,10 @@ const MyNavbar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="me-auto">
-                <NavLink
-                  className="nav-link"
-                  to="/"
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to="/newproduct"
-                >
-                  New Product
-                </NavLink>
-                <NavLink
-
-                  className="nav-link"
-                  to="/productlist"
-                >
-                  Product List
-                </NavLink>
-                <NavLink
-
-                  className="nav-link"
-                  to="/about"
-                >
-                  About
-                </NavLink>
+                <NavLink className="nav-link" to="/"> Home</NavLink>
+                <NavLink className="nav-link" to="/newproduct"> New Product </NavLink>
+                <NavLink className="nav-link" to="/productlist"> Product List</NavLink>
+                <NavLink className="nav-link" to="/about">About</NavLink>
               </Nav>
               <Link to="/productlist" >
                 <img className='cart-logo' src={logo} alt="" width="100px" height="80px" />
