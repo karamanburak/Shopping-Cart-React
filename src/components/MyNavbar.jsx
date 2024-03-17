@@ -23,7 +23,7 @@ const MyNavbar = () => {
                 <NavLink className="nav-link" to="/about">About</NavLink>
               </Nav>
               <Link to="/productlist" >
-                <img className='cart-logo' src={logo} alt="" width="100px" height="80px" />
+                <img className='cart-logo' src={logo} alt="" width="80px" height="50px" />
               </Link>
             </Navbar.Collapse>
           </div>
