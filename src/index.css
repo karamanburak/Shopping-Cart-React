@@ -18,9 +18,7 @@ body {
 }
 
 .main {
-    /* min-height: calc(80vh); */
     position: relative;
-
     >div {
         text-align: center;
         color: white;
@@ -80,7 +78,6 @@ h3 {
 
 .card {
     border: none;
-
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -144,7 +141,7 @@ h3 {
     border: 1px solid #135058 !important;
     color: #fff;
     height: 40px;
-    background-color: #135058;
+    background-color: #3284BC;
 }
 
 .buttons button:nth-child(1) {
@@ -182,7 +179,8 @@ h3 {
     border: 1px solid #135058 !important;
     color: #fff;
     height: 40px;
-    background-color: #135058;
+    background-color: #3284BC;
+    border: none;
 }
 
 .github,
@@ -207,8 +205,11 @@ h3 {
 
 .message-div {
     position: absolute;
-    left: 40%;
     top: 30%;
+    left: 40%;
+    transform: translate(-20%, -10%);
+    
+
 }
 
 table tr td,

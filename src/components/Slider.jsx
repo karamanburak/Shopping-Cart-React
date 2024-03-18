@@ -7,7 +7,7 @@ import { Carousel } from "react-bootstrap";
 const Slider = () => {
   return (
       <div className='carousel-div'> 
-       <Carousel variant='dark'  className='carousel'  autoPlay={true} interval={4000}>
+       <Carousel  className='carousel'  autoPlay={true} interval={4000}>
           <Carousel.Item>
               <img className="" src={logo1} alt="" />
           </Carousel.Item>
