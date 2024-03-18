@@ -5,7 +5,7 @@ import ProductList from "../pages/ProductList";
 import UpdateProduct from "../pages/UpdateProduct";
 import MyNavbar from "../components/MyNavbar";
 import About from "../pages/About";
-import NotFound from '../components/NotFound'
+import NotFound from '../pages/NotFound'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
