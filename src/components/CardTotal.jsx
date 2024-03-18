@@ -18,7 +18,7 @@ const CardTotal = ({ newProduct }) => {
   const total = (Number(subtotal) + Number(taxRate) + shipping).toFixed(0);
 
   return (
-    <table className="table d-flex justify-content-center align-items-center">
+    <table className="table mx-5">
       {subtotal <= 0 ? (
         <div className="message-div">
           <img src={noProduct} alt="" width="500px" className="rounded-4" />
