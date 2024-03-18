@@ -5,16 +5,16 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const UpdateProduct = () => {
   const BASE_URL = "https://65f4c515f54db27bc0224f20.mockapi.io/products";
-  const {state:{product}} = useLocation()
-  const {name,price,id,image,amount} = product
   const navigate = useNavigate();
+  const {state:{product}} = useLocation()
   const [item,setItem] = useState(product)
+  
   // console.log(item);
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`${BASE_URL}/${id}`,{...item})
+    await axios.put(`${BASE_URL}/${product.id}`,{...item})
   };
 
   //! POST (CREATE)\\
@@ -32,7 +32,7 @@ const UpdateProduct = () => {
               type="text"
               id="product-name"
               className="form-control mt-2"
-              value={name || ""}
+              value={item.name || ""}
               onChange={(e)=>setItem({...item, name:e.target.value})}
             />
           </div>
@@ -42,7 +42,7 @@ const UpdateProduct = () => {
               type="number"
               id="product-price"
               className="form-control mt-2"
-              value={price || ""}
+              value={item.price || ""}
               onChange={(e) => setItem({ ...product, price: e.target.value })}
 
             />
@@ -53,7 +53,7 @@ const UpdateProduct = () => {
               type="number"
               id="product-quantity"
               className="form-control mt-2"
-              value={amount ||""}
+              value={item.amount ||""}
               onChange={(e) => setItem({ ...product, amount: e.target.value })}
 
             />
@@ -67,7 +67,7 @@ const UpdateProduct = () => {
               type="url"
               id="product-image"
               className="form-control"
-              value={image || ""}
+              value={item.image || ""}
               onChange={(e) => setItem({ ...product, image: e.target.value })}
 
             />
