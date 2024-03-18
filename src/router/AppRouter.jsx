@@ -5,6 +5,7 @@ import ProductList from "../pages/ProductList";
 import UpdateProduct from "../pages/UpdateProduct";
 import MyNavbar from "../components/MyNavbar";
 import About from "../pages/About";
+import NotFound from '../components/NotFound'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
@@ -18,6 +19,7 @@ const AppRouter = () => {
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/updateproduct" element={<UpdateProduct />} />
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
