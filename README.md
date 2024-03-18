@@ -1,8 +1,9 @@
 # Shopping-Cart-React
-Multiple react web pages that can simply add and remove products to the database
-
 <p><img align="right"
-  src="./src/assets/avatar.png"  width="30px" style="border-radius:50%"></p>
+  src="./src/assets/avatar.png"  width="30px"></p>
+
+## Demo
+  <a href="https://shopping-cart-react-mockapi.vercel.app/" target="_blank">Shopping Cart</a>
 
 
 ## Description
@@ -49,6 +50,8 @@ SOLUTION
 
 ## Expected Outcome
 
+![shopping-cart](https://github.com/karamanburak/Shopping-Cart-React/assets/150926922/5bedbc39-7c0a-425a-8c76-ff6cf69fd846)
+
 
 
 ## Objective
@@ -86,7 +89,6 @@ Build a Shopping Cart App using ReactJS.
 
 - Watch the video and follow the steps to create an account and project on MockAPI.
 
-## Demo
-  <a href="https://shopping-cart-react-mockapi.vercel.app/" target="_blank">Shopping Cart</a>
+
 
 
