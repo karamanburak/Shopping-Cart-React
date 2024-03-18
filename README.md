@@ -86,10 +86,6 @@ Build a Shopping Cart App using ReactJS.
 - Step 4: You can use CSS frameworks like Bootstrap, Material UI etc.
 
 
-## Notes
-
-- Watch the video and follow the steps to create an account and project on MockAPI.
-
 
 
 
