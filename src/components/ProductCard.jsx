@@ -8,6 +8,8 @@ const ProductCard = ({ product, getData }) => {
 
   const navigate = useNavigate();
 
+  //!PUT to DataBase\\
+
   const handleDecrement = async () => {
     await axios.put(`${BASE_URL}/${id}`, {
       ...product,
@@ -89,7 +91,7 @@ const ProductCard = ({ product, getData }) => {
               </div>
               <div className="product-removal mt-4">
                 <button
-                onClick={() => navigate("/updateproduct")}
+                onClick={() => navigate(("/updateproduct"), {state:{product}})}
                   className="btn btn-warning btn-sm w-100 remove-product"
                 >
                   <i className="fa-solid fa-pen-to-square me-2"></i>Edit
