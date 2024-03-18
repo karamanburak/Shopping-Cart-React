@@ -1,12 +1,20 @@
+import axios from "axios";
+import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const UpdateProduct = ({item, setItem}) => {
-  console.log(item);
+const UpdateProduct = () => {
+  const BASE_URL = "https://65f4c515f54db27bc0224f20.mockapi.io/products";
+  const {state:{product}} = useLocation()
+  const {name,price,id,image,amount} = product
   const navigate = useNavigate();
+  const [item,setItem] = useState(product)
+  // console.log(item);
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    await axios.put(`${BASE_URL}/${id}`,{...item})
   };
 
   //! POST (CREATE)\\
@@ -24,8 +32,8 @@ const UpdateProduct = ({item, setItem}) => {
               type="text"
               id="product-name"
               className="form-control mt-2"
-              value={""}
-              // onChange={(e)=>setItem({...item, name:e.target.value})}
+              value={name || ""}
+              onChange={(e)=>setItem({...item, name:e.target.value})}
             />
           </div>
           <div>
@@ -34,8 +42,8 @@ const UpdateProduct = ({item, setItem}) => {
               type="number"
               id="product-price"
               className="form-control mt-2"
-              value={ ""}
-              // onChange={(e) => setItem({ ...item, price: e.target.value })}
+              value={price || ""}
+              onChange={(e) => setItem({ ...product, price: e.target.value })}
 
             />
           </div>
@@ -45,8 +53,8 @@ const UpdateProduct = ({item, setItem}) => {
               type="number"
               id="product-quantity"
               className="form-control mt-2"
-              value={""}
-              // onChange={(e) => setItem({ ...item, amount: e.target.value })}
+              value={amount ||""}
+              onChange={(e) => setItem({ ...product, amount: e.target.value })}
 
             />
           </div>
@@ -59,25 +67,19 @@ const UpdateProduct = ({item, setItem}) => {
               type="url"
               id="product-image"
               className="form-control"
-              value={""}
-              // onChange={(e) => setItem({ ...item, image: e.target.value })}
+              value={image || ""}
+              onChange={(e) => setItem({ ...product, image: e.target.value })}
 
             />
           </div>
           <div className="text-center mt-4">
             <button
+            onClick={()=> navigate(-1)}
              type="submit" className="btn btn-success mb-4 w-50">
               <FaCartPlus /> Save to Update Product
             </button>
           </div>
           <div className="text-center">
-            <button
-              onClick={() => navigate("/productlist")}
-              type="submit"
-              className="btn btn-danger mb-4 w-50"
-            >
-              <FaCartPlus /> Go Back to Product List
-            </button>
           </div>
         </div>
       </form>
