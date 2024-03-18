@@ -15,7 +15,7 @@ const CardTotal = ({ newProduct }) => {
 
   const shipping = subtotal > 300 || subtotal == 0 ? 0 : 25;
 
-  const total = (Number(subtotal) + Number(taxRate) + shipping).toFixed(0);
+  const total = (Number(subtotal) + Number(tax) + shipping).toFixed(0);
 
   return (
     <table className="table">
