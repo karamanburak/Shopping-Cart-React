@@ -9,12 +9,18 @@ const UpdateProduct = () => {
   const {state:{product}} = useLocation()
   const [item,setItem] = useState(product)
   
-  // console.log(item);
+  //! GET (READ)\\
+
+  const getData = async () => {
+    await axios.get(BASE_URL);
+  };
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.put(`${BASE_URL}/${product.id}`,{...item})
+    getData();
+
   };
 
   //! POST (CREATE)\\
