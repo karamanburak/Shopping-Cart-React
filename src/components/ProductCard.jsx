@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product, getData }) => {
-  const { name, image, price, amount, id } = product;
+  const { name, image, price, amount, id,dumpingRate } = product;
   const BASE_URL = "https://65f4c515f54db27bc0224f20.mockapi.io/products";
 
 
@@ -55,7 +55,7 @@ const ProductCard = ({ product, getData }) => {
               </h5>
               <div className="product-price d-flex flex-wrap align-items-center">
                 <span className="damping-price text-warning h2">
-                  {`$${(price * 0.8).toFixed(0)}`}{" "}
+                  {`$${(price * dumpingRate).toFixed(2)}`}{" "}
                 </span>
 
                 <span className="h5 text-dark text-decoration-line-through">
@@ -100,7 +100,7 @@ const ProductCard = ({ product, getData }) => {
               <div className="mt-2">
                 <b> Total Price: </b> $
                 <span className="product-line-price">
-                  {(price * 0.8 * amount).toFixed(0)}
+                  {(price * 0.8 * amount).toFixed(2)}
                 </span>
               </div>
             </div>

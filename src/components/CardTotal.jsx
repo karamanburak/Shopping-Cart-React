@@ -8,14 +8,14 @@ const CardTotal = ({ newProduct }) => {
 
   const subtotal = newProduct
     .reduce((acc, item) => acc + item.price * item.dumpingRate * item.amount, 0)
-    .toFixed(0);
+    .toFixed(2);
   // console.log(subtotal);
 
-  const tax = (subtotal * taxRate).toFixed(0);
+  const tax = (subtotal * taxRate).toFixed(2);
 
   const shipping = subtotal > 300 || subtotal == 0 ? 0 : 25;
 
-  const total = (Number(subtotal) + Number(tax) + shipping).toFixed(0);
+  const total = (Number(subtotal) + Number(tax) + shipping).toFixed(2);
 
   return (
     <table className="table">
