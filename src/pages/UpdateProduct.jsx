@@ -49,7 +49,7 @@ const UpdateProduct = () => {
               id="product-price"
               className="form-control mt-2"
               value={item.price || ""}
-              onChange={(e) => setItem({ ...product, price: e.target.value })}
+              onChange={(e) => setItem({ ...item, price: e.target.value })}
 
             />
           </div>
@@ -60,12 +60,12 @@ const UpdateProduct = () => {
               id="product-quantity"
               className="form-control mt-2"
               value={item.amount ||""}
-              onChange={(e) => setItem({ ...product, amount: e.target.value })}
+              onChange={(e) => setItem({ ...item, amount: e.target.value })}
 
             />
           </div>
           <label className="mb-2" htmlFor="product-image">
-            Product Image
+            Product item
           </label>
           <div className="input-group mb-3">
             <span className="input-group-text">https://example.com/</span>
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
               id="product-image"
               className="form-control"
               value={item.image || ""}
-              onChange={(e) => setItem({ ...product, image: e.target.value })}
+              onChange={(e) => setItem({ ...item, image: e.target.value })}
 
             />
           </div>
