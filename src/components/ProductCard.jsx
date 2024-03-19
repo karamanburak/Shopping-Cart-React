@@ -55,11 +55,11 @@ const ProductCard = ({ product, getData }) => {
               </h5>
               <div className="product-price d-flex flex-wrap align-items-center">
                 <span className="damping-price text-warning h2">
-                  {`$${(price * dampingRate).toFixed(2)}`}{" "}
+                  {`$${(price * dampingRate).toFixed(2)}`}
                 </span>
 
                 <span className="h5 text-dark text-decoration-line-through">
-                  {` $${price} `}
+                  {parseFloat(price).toFixed(2)}
                 </span>
               </div>
               <div className="border border-1 border-dark shadow-lg d-flex justify-content-center p-2">
