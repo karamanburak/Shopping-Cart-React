@@ -19,7 +19,7 @@ const UpdateProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.put(`${BASE_URL}/${product.id}`,{...item})
-    getData();
+    navigate(-1)
 
   };
 
@@ -80,7 +80,6 @@ const UpdateProduct = () => {
           </div>
           <div className="text-center mt-4">
             <button
-            onClick={()=> navigate(-1)}
              type="submit" className="btn btn-success mb-4 w-50">
               <FaCartPlus /> Save to Update Product
             </button>
