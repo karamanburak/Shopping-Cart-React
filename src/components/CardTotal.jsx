@@ -7,7 +7,7 @@ const CardTotal = ({ newProduct }) => {
   const taxRate = 0.18;
 
   const subtotal = newProduct
-    .reduce((acc, item) => acc + item.price * item.dumpingRate * item.amount, 0)
+    .reduce((acc, item) => acc + item.price * item.dampingRate * item.amount, 0)
     .toFixed(2);
   // console.log(subtotal);
 

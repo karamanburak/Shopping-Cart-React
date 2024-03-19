@@ -29,7 +29,7 @@ const NewProduct = () => {
       price: productPrice,
       amount: productQuantity,
       image: productImage,
-      dumpingRate: 0.8,
+      dampingRate: 0.8,
     });
 
     setProductName("");
