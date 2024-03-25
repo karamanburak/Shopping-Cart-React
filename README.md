@@ -9,8 +9,8 @@
 
 ## Description
 
-Project aims to create a Shopping Cart App.
-
+A multi-page web application with multiple pages and the transition between pages is left to the user.
+The purpose of the project is to add a certain product to a shopping cart, buy the product added to the cart and delete unwanted products from the cart. The user must add the products they want to buy to the cart themselves.
 
 ## Project Skeleton
 
