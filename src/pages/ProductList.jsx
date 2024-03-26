@@ -26,7 +26,7 @@ const ProductList = () => {
   if (loading) {
     return (
       <div className=" text-center mt-5">
-        <img src={spinner} alt="" width="100px" />
+        <img src={spinner} alt="" width="110px" />
       </div>
     );
   }
