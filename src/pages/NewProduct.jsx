@@ -16,9 +16,7 @@ const NewProduct = () => {
   const postData = async (newData) => {
     await axios.post(BASE_URL, newData);
   };
-
   const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
