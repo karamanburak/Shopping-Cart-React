@@ -55,7 +55,6 @@ SOLUTION
 ![shopping-cart](https://github.com/karamanburak/Shopping-Cart-React/assets/150926922/5bedbc39-7c0a-425a-8c76-ff6cf69fd846)
 
 
-
 ## Objective
 
 Build a Shopping Cart App using ReactJS.
