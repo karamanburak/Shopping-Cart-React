@@ -1,16 +1,12 @@
-# Shopping-Cart-React
+# shopping-cart
   <div style="text-align:center;">
-    <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
 </div>
 
-## Demo
-  <a href="https://shopping-cart-react-mockapi.vercel.app/" target="_blank">Shopping Cart</a>
-
+- [Live Demo](https://shopping-cart-react-mockapi.vercel.app/)
 
 ## Description
 
-A multi-page web application with multiple pages and the transition between pages is left to the user.
-The purpose of the project is to add a certain product to a shopping cart, buy the product added to the cart and delete unwanted products from the cart. The user must add the products they want to buy to the cart themselves.
+The aim of the project is to add a specific product to a shopping cart, purchase the product added to the cart, and delete unwanted products from the cart. The user must add the products they want to buy to the cart themselves.
 
 ## Project Skeleton
 
@@ -50,7 +46,7 @@ SOLUTION
 
 ```
 
-## Expected Outcome
+## Outcome
 
 ![shopping-cart](https://github.com/karamanburak/Shopping-Cart-React/assets/150926922/5bedbc39-7c0a-425a-8c76-ff6cf69fd846)
 
@@ -69,11 +65,6 @@ Build a Shopping Cart App using ReactJS.
 
 - ReactJS
 
-### At the end of the project, you will be able to;
-
-- improve coding skills within HTML & CSS & JS & ReactJS.
-
-- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
 ## Steps to Solution
 
