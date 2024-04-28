@@ -1,8 +1,6 @@
 # shopping-cart
-  <div style="text-align:center;">
-</div>
 
-- [Sopping Cart](https://shopyfi.vercel.app/)
+ [Sopping Cart Live](https://shopyfi.vercel.app/)
 
 ## Description
 
