@@ -2,7 +2,7 @@
   <div style="text-align:center;">
 </div>
 
-- [Live Demo](https://shopping-cart-react-mockapi.vercel.app/)
+- [Sopping Cart](https://shopyfi.vercel.app/)
 
 ## Description
 
